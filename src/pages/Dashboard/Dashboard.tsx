@@ -1,5 +1,6 @@
 import { BarChart3, Calendar, CreditCard, Percent, ShoppingCart } from 'lucide-react'
 import StatsCard from '../../components/StatsCard/StatsCard'
+import SalesOverview from './components/SalesOverview/SalesOverview'
 import styles from './Dashboard.module.css'
 
 const stats = [
@@ -45,9 +46,9 @@ function Dashboard() {
           <h1 className={styles.title} id="dashboard-title">С возвращением, Антон</h1>
           <p className={styles.description}>Вот что происходит в вашем магазине сегодня.</p>
         </div>
-        <div className={styles.period} aria-label="Период: 1 апреля — 30 апреля 2024">
+        <div className={styles.period} aria-label="Период: 1 июля — 31 июля 2026">
           <Calendar size={18} strokeWidth={1.8} aria-hidden="true" />
-          <span>1 апр. 2024 — 30 апр. 2024</span>
+          <span>1 июл. 2026 — 31 июл. 2026</span>
         </div>
       </div>
 
@@ -55,6 +56,10 @@ function Dashboard() {
         {stats.map((stat) => (
           <StatsCard key={stat.title} {...stat} />
         ))}
+      </div>
+
+      <div className={styles.analyticsGrid}>
+        <SalesOverview />
       </div>
     </section>
   )
