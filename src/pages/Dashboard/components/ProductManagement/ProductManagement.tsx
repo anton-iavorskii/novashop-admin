@@ -1,11 +1,7 @@
 import { Package } from 'lucide-react'
+import { formatCurrency } from '../../../../shared/lib/formatCurrency'
 import { products } from './productsData'
 import styles from './ProductManagement.module.css'
-
-const currencyFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-})
 
 function ProductManagement() {
   return (
@@ -39,7 +35,7 @@ function ProductManagement() {
                     <span className={styles.productName}>{product.name}</span>
                   </div>
                 </th>
-                <td className={styles.price}>{currencyFormatter.format(product.price)}</td>
+                <td className={styles.price}>{formatCurrency(product.price)}</td>
                 <td><span className={`${styles.badge} ${styles.stock} ${styles[product.stockTone]}`}>{product.stock}</span></td>
                 <td><span className={`${styles.badge} ${styles.green}`}>{product.status}</span></td>
               </tr>

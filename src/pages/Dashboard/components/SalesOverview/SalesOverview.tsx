@@ -9,20 +9,15 @@ import {
   YAxis,
 } from 'recharts'
 import type { TooltipContentProps } from 'recharts'
+import { formatCurrency } from '../../../../shared/lib/formatCurrency'
 import { salesData } from './salesData'
 import styles from './SalesOverview.module.css'
 
 const dayTicks = [1, 5, 9, 13, 17, 21, 25, 29]
-const revenueTicks = [0, 500, 1000, 1500, 2000]
-const currencyFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  maximumFractionDigits: 0,
-  minimumFractionDigits: 0,
-})
+const revenueTicks = [0, 50_000, 100_000, 150_000, 200_000]
 
-function formatRevenue(value: number) {
-  return currencyFormatter.format(value)
+function formatRevenueTick(value: number) {
+  return formatCurrency(value, 'compact')
 }
 
 function formatDay(day: number) {
@@ -39,7 +34,7 @@ function SalesTooltip({ active, payload, label }: TooltipContentProps) {
   return (
     <div className={styles.tooltip}>
       <p className={styles.tooltipDate}>{label} июл. 2026</p>
-      <p className={styles.tooltipValue}>{formatRevenue(revenue)}</p>
+      <p className={styles.tooltipValue}>{formatCurrency(revenue)}</p>
     </div>
   )
 }
@@ -73,7 +68,7 @@ function SalesOverview() {
             data={salesData}
             margin={{ top: 12, right: 12, bottom: 0, left: 0 }}
             accessibilityLayer
-            aria-label="Выручка магазина за июль 2026 года в долларах"
+            aria-label="Выручка магазина за июль 2026 года в рублях"
           >
             <CartesianGrid stroke="#edf1f7" />
             <XAxis
@@ -91,12 +86,12 @@ function SalesOverview() {
               tickLine={false}
             />
             <YAxis
-              domain={[0, 2000]}
+              domain={[0, 200_000]}
               ticks={revenueTicks}
-              tickFormatter={formatRevenue}
+              tickFormatter={formatRevenueTick}
               tick={{ fill: '#7c8ea8', fontSize: 11 }}
               tickMargin={8}
-              width={52}
+              width={72}
               axisLine={false}
               tickLine={false}
             />

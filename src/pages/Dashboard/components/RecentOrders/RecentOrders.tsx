@@ -1,12 +1,8 @@
 import { FileText } from 'lucide-react'
+import { formatCurrency } from '../../../../shared/lib/formatCurrency'
 import { orders } from './ordersData'
 import type { OrderStatus } from './ordersData'
 import styles from './RecentOrders.module.css'
-
-const currencyFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-})
 
 const statusClasses: Record<OrderStatus, string> = {
   'Доставлен': styles.delivered,
@@ -44,7 +40,7 @@ function RecentOrders() {
                 <th scope="row" className={styles.orderNumber}>#{order.id}</th>
                 <td className={styles.customer}>{order.customer}</td>
                 <td>{order.items}</td>
-                <td className={styles.amount}>{currencyFormatter.format(order.total)}</td>
+                <td className={styles.amount}>{formatCurrency(order.total)}</td>
                 <td><span className={`${styles.badge} ${statusClasses[order.status]}`}>{order.status}</span></td>
                 <td className={styles.date}>{order.date}</td>
               </tr>

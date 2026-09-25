@@ -1,5 +1,6 @@
 import { BarChart3, Calendar, CreditCard, Percent, ShoppingCart } from 'lucide-react'
 import StatsCard from '../../components/StatsCard/StatsCard'
+import { formatCurrency } from '../../shared/lib/formatCurrency'
 import SalesOverview from './components/SalesOverview/SalesOverview'
 import TopCategories from './components/TopCategories/TopCategories'
 import TrafficSources from './components/TrafficSources/TrafficSources'
@@ -11,7 +12,7 @@ import styles from './Dashboard.module.css'
 const stats = [
   {
     title: 'Общая выручка',
-    value: '$24,780',
+    value: 2_478_000,
     change: '+12.5%',
     helper: 'по сравнению с прошлым месяцем',
     icon: BarChart3,
@@ -35,7 +36,7 @@ const stats = [
   },
   {
     title: 'Средний чек',
-    value: '$27.80',
+    value: 2_780,
     change: '+4.1%',
     helper: 'по сравнению с прошлым месяцем',
     icon: CreditCard,
@@ -58,8 +59,12 @@ function Dashboard() {
       </div>
 
       <div className={styles.statsGrid}>
-        {stats.map((stat) => (
-          <StatsCard key={stat.title} {...stat} />
+        {stats.map(({ value, ...stat }) => (
+          <StatsCard
+            key={stat.title}
+            {...stat}
+            value={typeof value === 'number' ? formatCurrency(value) : value}
+          />
         ))}
       </div>
 

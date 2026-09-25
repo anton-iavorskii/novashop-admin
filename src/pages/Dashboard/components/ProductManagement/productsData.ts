@@ -12,9 +12,9 @@ type Product = {
 }
 
 export const products: Product[] = [
-  { name: 'Беспроводные наушники', price: 79, stock: 45, stockTone: 'green', status: 'Активен', icon: Headphones, thumbnailTone: 'slate' },
-  { name: 'Минималистичный рюкзак', price: 49, stock: 12, stockTone: 'orange', status: 'Активен', icon: Backpack, thumbnailTone: 'sand' },
-  { name: 'Умные часы', price: 129, stock: 8, stockTone: 'red', status: 'Активен', icon: Watch, thumbnailTone: 'stone' },
-  { name: 'Керамическая кружка', price: 14, stock: 120, stockTone: 'green', status: 'Активен', icon: Coffee, thumbnailTone: 'mist' },
-  { name: 'Хлопковая футболка', price: 22, stock: 6, stockTone: 'red', status: 'Активен', icon: Shirt, thumbnailTone: 'linen' },
+  { name: 'Беспроводные наушники', price: 7_990, stock: 45, stockTone: 'green', status: 'Активен', icon: Headphones, thumbnailTone: 'slate' },
+  { name: 'Минималистичный рюкзак', price: 4_990, stock: 12, stockTone: 'orange', status: 'Активен', icon: Backpack, thumbnailTone: 'sand' },
+  { name: 'Умные часы', price: 12_990, stock: 8, stockTone: 'red', status: 'Активен', icon: Watch, thumbnailTone: 'stone' },
+  { name: 'Керамическая кружка', price: 1_490, stock: 120, stockTone: 'green', status: 'Активен', icon: Coffee, thumbnailTone: 'mist' },
+  { name: 'Хлопковая футболка', price: 2_290, stock: 6, stockTone: 'red', status: 'Активен', icon: Shirt, thumbnailTone: 'linen' },
 ]

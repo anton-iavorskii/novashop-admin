@@ -1,13 +1,8 @@
 import { ShoppingBag } from 'lucide-react'
+import { formatCurrency } from '../../../../shared/lib/formatCurrency'
 import { categories } from './categoriesData'
 import styles from './TopCategories.module.css'
 
-const currencyFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  maximumFractionDigits: 0,
-  minimumFractionDigits: 0,
-})
 const maxRevenue = Math.max(...categories.map((category) => category.revenue))
 
 function TopCategories() {
@@ -29,13 +24,13 @@ function TopCategories() {
           <li className={styles.item} key={category.name}>
             <div className={styles.itemHeading}>
               <span className={styles.categoryName}>{category.name}</span>
-              <span className={styles.revenue}>{currencyFormatter.format(category.revenue)}</span>
+              <span className={styles.revenue}>{formatCurrency(category.revenue)}</span>
             </div>
             <progress
               className={`${styles.progress} ${styles[category.tone]}`}
               value={category.revenue}
               max={maxRevenue}
-              aria-label={`${category.name}: ${currencyFormatter.format(category.revenue)}`}
+              aria-label={`${category.name}: ${formatCurrency(category.revenue)}`}
             />
           </li>
         ))}
