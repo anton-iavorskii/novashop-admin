@@ -1,0 +1,246 @@
+.card {
+  min-width: 0;
+  padding: 8px 10px 10px;
+  border: 1px solid #e3e9f1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgb(24 42 69 / 2%);
+}
+
+.tableScroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tableScroll:focus-visible {
+  outline: 2px solid #8cb4fb;
+  outline-offset: -2px;
+}
+
+.table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #34445d;
+  font-size: 12px;
+  text-align: left;
+}
+
+.table thead {
+  background: #f4f7fb;
+  color: #70819a;
+  font-size: 11px;
+}
+
+.table thead th {
+  height: 36px;
+  padding: 6px 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.table thead th:first-child {
+  width: 5%;
+  border-radius: 8px 0 0 8px;
+}
+
+.table thead th:nth-child(2) { width: 11%; }
+.table thead th:nth-child(3) { width: 16%; }
+.table thead th:nth-child(4) { width: 15%; }
+.table thead th:nth-child(5) { width: 9%; }
+.table thead th:nth-child(6) { width: 13%; }
+.table thead th:nth-child(7) { width: 13%; }
+.table thead th:nth-child(8) { width: 12%; }
+
+.table thead th:last-child {
+  width: 6%;
+  border-radius: 0 8px 8px 0;
+  text-align: center;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #eaf0f7;
+}
+
+.table tbody th,
+.table tbody td {
+  height: 53px;
+  padding: 5px 8px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.table tbody td:last-child {
+  text-align: center;
+}
+
+.table input[type='checkbox'] {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0 auto;
+  accent-color: #347cff;
+  cursor: pointer;
+}
+
+.primaryText,
+.secondaryText,
+.date {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.primaryText {
+  color: #27364e;
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.secondaryText {
+  margin-top: 2px;
+  color: #8393ab;
+  font-size: 10.5px;
+}
+
+.thumbnails {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.thumbnail {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  place-items: center;
+  border: 1px solid rgb(39 62 97 / 4%);
+  border-radius: 8px;
+}
+
+.slate { background: #eff2f6; color: #43536a; }
+.sand { background: #f3eee7; color: #81715f; }
+.blue { background: #e9f1fa; color: #52749e; }
+.green { background: #eaf4ef; color: #5d9177; }
+.purple { background: #f1edfa; color: #8267a4; }
+
+.moreItems {
+  display: inline-grid;
+  width: 29px;
+  height: 29px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: #f0f4f9;
+  color: #53647d;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.table tbody .total {
+  color: #2b3b54;
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.statusBadge {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.statusNew { background: #eaf2ff; color: #3f79d2; }
+.statusProcessing { background: #fff2e6; color: #c8782c; }
+.statusPaid { background: #e9f7f0; color: #288861; }
+.statusShipping { background: #f1edff; color: #785dcc; }
+.statusDelivered { background: #e7f8f0; color: #23855b; }
+.statusCancelled { background: #fdeef1; color: #ce5965; }
+
+.payment,
+.date {
+  color: #53647d;
+  white-space: nowrap;
+}
+
+.actionButton {
+  display: inline-grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #486285;
+  cursor: pointer;
+}
+
+.actionButton:hover { background: #f3f7fc; }
+.actionButton:focus-visible { outline: 2px solid #8cb4fb; }
+
+.footer {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 5px 0;
+}
+
+.count {
+  margin: 0;
+  color: #71839e;
+  font-size: 12px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.pageButton {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid #dfe7f2;
+  border-radius: 8px;
+  background: #fff;
+  color: #526785;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.pageButton:disabled {
+  color: #a2afc1;
+  cursor: default;
+}
+
+.pageButton:focus-visible {
+  outline: 2px solid #8cb4fb;
+  outline-offset: 2px;
+}
+
+.currentPage {
+  border-color: #347cff;
+  background: #347cff;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 680px) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

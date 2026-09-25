@@ -1,0 +1,147 @@
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.7fr) repeat(3, minmax(150px, 0.85fr)) auto;
+  align-items: end;
+  gap: 14px;
+  margin-bottom: 14px;
+  padding: 15px 18px;
+  border: 1px solid #e3e9f1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgb(24 42 69 / 2%);
+}
+
+.searchField {
+  display: flex;
+  min-width: 0;
+  height: 40px;
+  align-items: center;
+  gap: 11px;
+  padding: 0 12px;
+  border: 1px solid #dfe7f2;
+  border-radius: 9px;
+  background: #f8faff;
+  color: #8091aa;
+}
+
+.searchField:focus-within,
+.selectControl:focus-within {
+  border-color: #8cb4fb;
+  outline: 2px solid rgb(52 124 255 / 13%);
+}
+
+.searchField svg {
+  flex: none;
+}
+
+.searchField input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #172338;
+  font-size: 12px;
+}
+
+.searchField input::placeholder {
+  color: #8a9bb4;
+  opacity: 1;
+}
+
+.selectField {
+  display: block;
+  min-width: 0;
+}
+
+.fieldLabel {
+  display: block;
+  margin-bottom: 4px;
+  color: #718096;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.selectControl {
+  position: relative;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border: 1px solid #dfe7f2;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.selectControl select {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  appearance: none;
+  padding: 0 32px 0 11px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #34445d;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+.selectControl > svg:last-child {
+  position: absolute;
+  right: 10px;
+  color: #7186a3;
+  pointer-events: none;
+}
+
+.dateControl > svg:first-child {
+  flex: none;
+  margin-left: 11px;
+  color: #7186a3;
+  pointer-events: none;
+}
+
+.dateControl select {
+  padding-left: 8px;
+}
+
+.resetButton {
+  display: inline-flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px;
+  border: 1px solid #dfe7f2;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 2px 7px rgb(24 42 69 / 3%);
+  color: #53647a;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.resetButton:focus-visible {
+  outline: 2px solid #8cb4fb;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1180px) {
+  .toolbar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .toolbar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
