@@ -58,10 +58,42 @@
 
 .analyticsGrid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: stretch;
   gap: 14px;
   margin-top: 16px;
+}
+
+.analyticsGrid > :first-child {
+  grid-column: span 2;
+}
+
+.operationsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+@media (max-width: 1560px) {
+  .operationsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .operationsGrid > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .operationsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .operationsGrid > :first-child {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 1480px) {

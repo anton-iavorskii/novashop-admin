@@ -3,6 +3,9 @@ import StatsCard from '../../components/StatsCard/StatsCard'
 import SalesOverview from './components/SalesOverview/SalesOverview'
 import TopCategories from './components/TopCategories/TopCategories'
 import TrafficSources from './components/TrafficSources/TrafficSources'
+import RecentOrders from './components/RecentOrders/RecentOrders'
+import ProductManagement from './components/ProductManagement/ProductManagement'
+import CustomerActivity from './components/CustomerActivity/CustomerActivity'
 import styles from './Dashboard.module.css'
 
 const stats = [
@@ -64,6 +67,12 @@ function Dashboard() {
         <SalesOverview />
         <TopCategories />
         <TrafficSources />
+      </div>
+
+      <div className={styles.operationsGrid}>
+        <RecentOrders />
+        <ProductManagement />
+        <CustomerActivity />
       </div>
     </section>
   )

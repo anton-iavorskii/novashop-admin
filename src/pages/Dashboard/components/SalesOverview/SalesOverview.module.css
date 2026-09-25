@@ -1,5 +1,6 @@
 .card {
   min-width: 0;
+  height: 100%;
   padding: 18px;
   border: 1px solid #e6ebf2;
   border-radius: 14px;
@@ -9,6 +10,7 @@
 
 .header {
   display: flex;
+  min-height: 44px;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
