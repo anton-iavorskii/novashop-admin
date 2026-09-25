@@ -70,6 +70,12 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 1.4;
+  text-decoration: none;
+}
+
+.navigationItem:focus-visible {
+  outline: 2px solid #7fabff;
+  outline-offset: 2px;
 }
 
 .navigationItem svg {

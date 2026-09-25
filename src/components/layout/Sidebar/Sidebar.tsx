@@ -10,18 +10,26 @@ import {
   Store,
   Users,
 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
 import styles from './Sidebar.module.css'
 
-const navigationItems = [
-  { label: 'Панель', icon: LayoutDashboard },
-  { label: 'Заказы', icon: ShoppingCart },
-  { label: 'Товары', icon: Package },
-  { label: 'Клиенты', icon: Users },
-  { label: 'Аналитика', icon: BarChart3 },
-  { label: 'Маркетинг', icon: Megaphone },
-  { label: 'Скидки', icon: BadgePercent },
-  { label: 'Контент', icon: FileText },
-  { label: 'Настройки', icon: Settings },
+type NavigationItem = {
+  label: string
+  path: string
+  icon: LucideIcon
+}
+
+const navigationItems: NavigationItem[] = [
+  { label: 'Панель', path: '/', icon: LayoutDashboard },
+  { label: 'Заказы', path: '/orders', icon: ShoppingCart },
+  { label: 'Товары', path: '/products', icon: Package },
+  { label: 'Клиенты', path: '/customers', icon: Users },
+  { label: 'Аналитика', path: '/analytics', icon: BarChart3 },
+  { label: 'Маркетинг', path: '/marketing', icon: Megaphone },
+  { label: 'Скидки', path: '/discounts', icon: BadgePercent },
+  { label: 'Контент', path: '/content', icon: FileText },
+  { label: 'Настройки', path: '/settings', icon: Settings },
 ]
 
 function Sidebar() {
@@ -37,15 +45,18 @@ function Sidebar() {
       <nav className={styles.navigation} aria-label="Основная навигация">
         <p className={styles.navigationLabel}>МЕНЮ</p>
         <ul className={styles.navigationList}>
-          {navigationItems.map(({ label, icon: Icon }, index) => (
-            <li key={label}>
-              <span
-                className={`${styles.navigationItem} ${index === 0 ? styles.active : ''}`}
-                aria-current={index === 0 ? 'page' : undefined}
+          {navigationItems.map(({ label, path, icon: Icon }) => (
+            <li key={path}>
+              <NavLink
+                to={path}
+                end={path === '/'}
+                className={({ isActive }) =>
+                  `${styles.navigationItem} ${isActive ? styles.active : ''}`
+                }
               >
                 <Icon size={19} strokeWidth={1.8} aria-hidden="true" />
                 <span>{label}</span>
-              </span>
+              </NavLink>
             </li>
           ))}
         </ul>
