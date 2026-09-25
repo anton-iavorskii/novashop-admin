@@ -49,8 +49,8 @@ function Dashboard() {
     <section className={styles.dashboard} aria-labelledby="dashboard-title">
       <div className={styles.headingRow}>
         <div className={styles.headingText}>
-          <h1 className={styles.title} id="dashboard-title">С возвращением, Антон</h1>
-          <p className={styles.description}>Вот что происходит в вашем магазине сегодня.</p>
+          <h1 className={styles.title} id="dashboard-title">Обзор магазина</h1>
+          <p className={styles.description}>Основные показатели магазина за выбранный период</p>
         </div>
         <div className={styles.period} aria-label="Период: 1 июля — 31 июля 2026">
           <Calendar size={18} strokeWidth={1.8} aria-hidden="true" />

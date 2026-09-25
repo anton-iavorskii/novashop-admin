@@ -1,0 +1,9 @@
+.metric { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+.metric > strong { color: #172338; font-size: 25px; letter-spacing: -0.04em; }
+.caption { margin-top: 2px; color: #8393ab; font-size: 10px; }
+.sparkline { height: 61px; width: 100%; margin: 10px 0 13px; }
+.metrics { display: grid; gap: 11px; margin: 0; color: #63758e; font-size: 10px; }
+.metrics > div { display: flex; align-items: baseline; gap: 8px; }
+.metrics dt { flex: 1; }
+.metrics dd { margin: 0; color: #34445d; font-weight: 600; white-space: nowrap; }
+.metrics .share { width: 30px; color: #8393ab; text-align: right; font-weight: 400; }

@@ -21,7 +21,7 @@ type NavigationItem = {
 }
 
 const navigationItems: NavigationItem[] = [
-  { label: 'Панель', path: '/', icon: LayoutDashboard },
+  { label: 'Главная', path: '/', icon: LayoutDashboard },
   { label: 'Заказы', path: '/orders', icon: ShoppingCart },
   { label: 'Товары', path: '/products', icon: Package },
   { label: 'Клиенты', path: '/customers', icon: Users },

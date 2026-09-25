@@ -1,0 +1,13 @@
+.card { display: flex; flex-direction: column; }
+.steps { display: grid; grid-template-rows: repeat(4, 1fr); flex: 1; gap: 5px; margin: 18px 0 0; padding: 0; list-style: none; }
+.step { display: grid; grid-template-columns: minmax(55px, 0.8fr) minmax(0, 1fr) 34px; align-items: center; gap: 10px; min-height: 52px; }
+.shapeBox { display: flex; height: 100%; align-items: stretch; justify-content: center; }
+.shape { display: block; width: 100%; min-height: 45px; border-radius: 4px; }
+/* Each level shares the same canvas and tapers by 8% on either side. */
+.blue { background: #6594ff; clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%); }
+.purple { background: #c0a8fa; clip-path: polygon(9% 0, 91% 0, 83% 100%, 17% 100%); }
+.pink { background: #ff9bbd; clip-path: polygon(18% 0, 82% 0, 74% 100%, 26% 100%); }
+.mint { background: #70d9ae; clip-path: polygon(27% 0, 73% 0, 65% 100%, 35% 100%); }
+.label span { display: block; color: #73839c; font-size: 10px; line-height: 1.45; }
+.label strong { display: block; margin-top: 4px; color: #172338; font-size: 15px; white-space: nowrap; }
+.percent { justify-self: end; padding: 3px 5px; border-radius: 6px; background: #f2f5fa; color: #7c8ea8; font-size: 9px; font-weight: 600; }

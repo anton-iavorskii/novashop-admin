@@ -1,0 +1,16 @@
+.body { display: grid; grid-template-columns: minmax(130px, 1fr) minmax(135px, 0.95fr); align-items: center; gap: 10px; min-height: 218px; margin-top: 12px; }
+.donut { position: relative; width: 100%; height: 195px; }
+.center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+.center strong { color: #172338; font-size: 14px; letter-spacing: -0.025em; white-space: nowrap; }
+.center span { margin-top: 3px; color: #8393ab; font-size: 10px; }
+.legend { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; color: #71839e; font-size: 10px; }
+.legend li { display: grid; grid-template-columns: 8px minmax(0, 1fr) auto; align-items: center; gap: 6px; }
+.legend strong { color: #53647d; font-size: 10px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.blue { background: #6594ff; }
+.purple { background: #bba2ff; }
+.pink { background: #ff9dbf; }
+.peach { background: #ffc793; }
+.yellow { background: #ffd36e; }
+.mint { background: #91d6b1; }
+.slate { background: #b9c5d8; }

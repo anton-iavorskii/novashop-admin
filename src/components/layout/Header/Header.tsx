@@ -18,9 +18,9 @@ function Header() {
           <Bell size={20} strokeWidth={1.8} aria-hidden="true" />
         </span>
         <div className={styles.profile}>
-          <span className={styles.avatar} aria-hidden="true">AI</span>
+          <span className={styles.avatar} aria-hidden="true">В</span>
           <div className={styles.profileDetails}>
-            <span className={styles.profileName}>Антон</span>
+            <span className={styles.profileName}>Виктор</span>
             <span className={styles.profileRole}>Владелец магазина</span>
           </div>
         </div>
