@@ -1,0 +1,18 @@
+.layout {
+  min-height: 100vh;
+}
+
+.workspace {
+  display: flex;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 244px;
+  flex-direction: column;
+}
+
+.main {
+  min-width: 0;
+  flex: 1;
+  padding: 42px 48px;
+  background: #f5f7fa;
+}

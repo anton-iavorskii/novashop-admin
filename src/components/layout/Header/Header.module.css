@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 0 40px;
+  border-bottom: 1px solid #e9edf3;
+  background: #fff;
+}
+
+.searchField {
+  display: flex;
+  width: min(420px, 50%);
+  height: 42px;
+  align-items: center;
+  gap: 11px;
+  padding: 0 14px;
+  border: 1px solid #e7ebf1;
+  border-radius: 11px;
+  background: #f8fafd;
+  color: #8998ac;
+}
+
+.searchField:focus-within {
+  border-color: #91b2f4;
+  outline: 3px solid #e5eeff;
+}
+
+.searchField svg {
+  flex: none;
+}
+
+.searchField input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #172338;
+  font-size: 13px;
+}
+
+.searchField input::placeholder {
+  color: #97a4b6;
+  opacity: 1;
+}
+
+.headerActions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 26px;
+}
+
+.notifications {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid #e8edf4;
+  border-radius: 11px;
+  color: #60718a;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.avatar {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: #e4edff;
+  color: #3260b5;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.profileName {
+  color: #1d2b40;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.profileRole {
+  color: #8996a8;
+  font-size: 11px;
+  line-height: 1.3;
+}
