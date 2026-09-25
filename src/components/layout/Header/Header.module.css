@@ -1,10 +1,10 @@
 .header {
   display: flex;
-  min-height: 80px;
+  min-height: 62px;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  padding: 0 40px;
+  padding: 0 20px;
   border-bottom: 1px solid #e9edf3;
   background: #fff;
 }
@@ -12,7 +12,7 @@
 .searchField {
   display: flex;
   width: min(420px, 50%);
-  height: 42px;
+  height: 36px;
   align-items: center;
   gap: 11px;
   padding: 0 14px;
