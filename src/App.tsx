@@ -2,10 +2,10 @@ import { Route, Routes } from 'react-router-dom'
 import AppLayout from './components/layout/AppLayout/AppLayout'
 import Dashboard from './pages/Dashboard/Dashboard'
 import PagePlaceholder from './pages/PagePlaceholder/PagePlaceholder'
+import Products from './pages/Products/Products'
 
 const placeholderRoutes = [
   { path: 'orders', title: 'Заказы', description: 'Управление заказами магазина' },
-  { path: 'products', title: 'Товары', description: 'Управление каталогом товаров' },
   { path: 'customers', title: 'Клиенты', description: 'Управление клиентами магазина' },
   { path: 'analytics', title: 'Аналитика', description: 'Расширенная аналитика магазина' },
   { path: 'marketing', title: 'Маркетинг', description: 'Маркетинговые инструменты и кампании' },
@@ -19,6 +19,7 @@ function App() {
     <Routes>
       <Route path="/" element={<AppLayout />}>
         <Route index element={<Dashboard />} />
+        <Route path="products" element={<Products />} />
         {placeholderRoutes.map(({ path, title, description }) => (
           <Route
             key={path}

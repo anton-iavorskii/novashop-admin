@@ -73,9 +73,13 @@
   text-decoration: none;
 }
 
+.navigationItem:focus {
+  outline: none;
+}
+
 .navigationItem:focus-visible {
   outline: 2px solid #7fabff;
-  outline-offset: 2px;
+  outline-offset: -2px;
 }
 
 .navigationItem svg {
