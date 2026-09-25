@@ -58,10 +58,20 @@
 
 .analyticsGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-  align-items: start;
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: 14px;
   margin-top: 16px;
+}
+
+@media (max-width: 1480px) {
+  .analyticsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analyticsGrid > :first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -69,13 +79,18 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .analyticsGrid {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
 @media (max-width: 900px) {
   .headingRow {
     flex-direction: column;
+  }
+
+  .analyticsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .analyticsGrid > :first-child {
+    grid-column: auto;
   }
 }

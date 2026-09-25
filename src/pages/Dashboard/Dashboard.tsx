@@ -1,6 +1,8 @@
 import { BarChart3, Calendar, CreditCard, Percent, ShoppingCart } from 'lucide-react'
 import StatsCard from '../../components/StatsCard/StatsCard'
 import SalesOverview from './components/SalesOverview/SalesOverview'
+import TopCategories from './components/TopCategories/TopCategories'
+import TrafficSources from './components/TrafficSources/TrafficSources'
 import styles from './Dashboard.module.css'
 
 const stats = [
@@ -60,6 +62,8 @@ function Dashboard() {
 
       <div className={styles.analyticsGrid}>
         <SalesOverview />
+        <TopCategories />
+        <TrafficSources />
       </div>
     </section>
   )
